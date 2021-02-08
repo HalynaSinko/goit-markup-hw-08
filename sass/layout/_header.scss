@@ -1,0 +1,49 @@
+// header
+.header {
+  border-bottom: 1px solid #ececec;
+  background-color: $main-background-color;
+}
+
+.header__page-logo {
+  margin-right: 93px;
+  padding: 24px 1px 25px 1px;
+  color: #000000;
+}
+
+.header__nav-site {
+  display: flex;
+  align-items: center;
+}
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 32px 0px 32px;
+  font-weight: $average-font-weight;
+  letter-spacing: 0.02em;
+  color: $secondary-color;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact-link__icon {
+  fill: currentColor;
+
+  &--prepend {
+    margin-right: 10px;
+  }
+}

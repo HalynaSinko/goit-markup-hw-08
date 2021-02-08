@@ -1,0 +1,31 @@
+.footer {
+  background-color: $dark-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__container {
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer__box {
+  width: 231px;
+}
+
+.footer__page-logo {
+  margin-bottom: 20px;
+  width: 145px;
+  color: #ffffff;
+}
+
+.footer__join {
+  min-width: 206px;
+}
+
+.subscription__text,
+.footer__join-text {
+  margin-bottom: 20px;
+  font-weight: $bolt-font-weight;
+  text-transform: uppercase;
+  color: $dark-main-color;
+}
