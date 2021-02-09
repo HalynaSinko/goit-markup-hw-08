@@ -1,41 +1,47 @@
 .hero {
-  background-color: $hero-background-color;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 280px;
-}
-
-.hero__title {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  font-size: 44px;
-  font-weight: $hero-title-font-weight;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  color: $dark-main-color;
-}
-
-.hero__container-title {
-  width: 696px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.hero__overlay {
   max-width: 1600px;
-  max-height: 600px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 400px;
+  text-align: center;
+  padding: 118px 0;
+  margin: 0 auto;
+  background-color: $hero-background-color;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero-bg-img.jpg);
+  background-position: center;
   background-size: cover;
   background-position: center;
+
+  @media screen and (min-width: $desktop) {
+    height: 600px;
+    padding: 200px 0;
+  }
+}
+
+.hero__title {
+  margin: 0 auto 30px;
+  width: 100%;
+
+  font-weight: $hero-title-font-weight;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $dark-main-color;
+
+  @media screen and (min-width: $mobile) {
+    width: 360px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {
