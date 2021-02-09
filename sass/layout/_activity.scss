@@ -1,19 +1,22 @@
-.works {
+.activity {
   padding-bottom: 94px;
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
 }
 
-.works__list {
+.activity__list {
   display: flex;
-  margin-right: -30px;
+  justify-content: space-between;
 }
 
-.works__list-item {
+.activity__list-item {
   position: relative;
   flex-basis: calc(100% / 3 - 30px);
-  margin-right: 30px;
 }
 
-.works__subtitle {
+.activity__subtitle {
   position: absolute;
   bottom: 0;
 
