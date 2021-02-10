@@ -38,10 +38,10 @@
   background-color: $accent-color;
   opacity: 0;
   @include transition(opacity);
+}
 
-  .nav-list__link--active &,
-  .nav-list__link:hover &,
-  .nav-list__link:focus & {
-    opacity: 1;
-  }
+.nav-list__link--active::after,
+.nav-list__link:hover::after,
+.nav-list__link:focus::after {
+  opacity: 1;
 }
