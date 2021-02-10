@@ -10,7 +10,7 @@
 
 <body>
   <!-- header site -->
-  <header class="header">
+  <!-- <header class="header">
     <div class="container">
       <nav class="header__nav-site">
         <a class="page-logo header__page-logo" href="./index.html">
@@ -42,7 +42,7 @@
         </li>
       </ul>
     </div>
-  </header>
+  </header> -->
   <!-- main portfolio  -->
   <main>
     <section class="portfolio">
@@ -229,7 +229,7 @@
       </div>
     </section>
   </main>
-  <!-- footer -->
+
   <!-- footer -->
   <footer class="footer">
     <div class="container footer__container">
@@ -283,16 +283,16 @@
 
       <!-- Form subscription -->
       <form class="subscription" name="subscription" autocomplete="on">
-        <p class="subscription__text text">Подпишитесь на рассылку</p>
-        <div class="subscription__form-field">
+        <p class="subscription__text">Подпишитесь на рассылку</p>
+        <div class="subscription__form-container">
           <input type="email" class="subscription__input-email" name="email" placeholder="E-mail" />
+          <button class="button subscription__button" type="submit">
+            Подписаться
+            <svg class="button__icon-send" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-send"></use>
+            </svg>
+          </button>
         </div>
-        <button class="button subscription__button" type="submit">
-          Подписаться
-          <svg class="button__icon-send" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-send"></use>
-          </svg>
-        </button>
       </form>
     </div>
   </footer>

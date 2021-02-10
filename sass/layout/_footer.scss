@@ -4,12 +4,29 @@
   padding-bottom: 60px;
 }
 .footer__container {
-  align-items: baseline;
-  justify-content: space-between;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    @media screen and (min-width: $desktop) {
+      flex-wrap: unset;
+      justify-content: space-between;
+    }
+  }
 }
 
 .footer__box {
-  width: 231px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 50%;
+  }
+  @media screen and (min-width: $desktop) {
+    align-items: flex-start;
+  }
 }
 
 .footer__page-logo {
@@ -19,7 +36,18 @@
 }
 
 .footer__join {
-  min-width: 206px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 50%;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: unset;
+    align-items: flex-start;
+  }
 }
 
 .subscription__text,
@@ -28,4 +56,5 @@
   font-weight: $bolt-font-weight;
   text-transform: uppercase;
   color: $dark-main-color;
+  text-align: center;
 }
