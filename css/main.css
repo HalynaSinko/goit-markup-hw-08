@@ -368,6 +368,10 @@ body {
   color: #212121;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Контейнер для позиционирования */
 .container {
   width: 100%;
@@ -1123,7 +1127,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscription {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1131,6 +1140,9 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
