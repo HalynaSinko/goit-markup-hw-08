@@ -1,7 +1,6 @@
 // form-request
 
 .form-request {
-  padding: 40px;
   border-radius: inherit;
   background-color: $main-background-color;
 }
@@ -10,10 +9,14 @@
   margin-bottom: 12px;
   font-weight: $bolt-font-weight;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   color: $main-color;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }
 
 .form-request__label {
@@ -89,6 +92,12 @@
 
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
+    font-size: 14px;
+    line-height: 1.14;
+    @media screen and (min-width: $desktop) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
   }
 }
 
@@ -109,19 +118,31 @@
 /* checkbox */
 .form-request__field-agree {
   position: relative;
-  display: inline-block;
   margin-bottom: 30px;
-  padding-left: 35px;
-  line-height: 1.71;
+  padding-left: 24px;
   color: $secondary-color;
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 35px;
+  }
 }
 
 .form-request__contract-terms {
-  display: inline-block;
-  line-height: 1.71;
   text-decoration: underline;
   color: $accent-color;
   text-decoration-skip-ink: none;
+}
+
+.form-request__contract-terms,
+.form-request__field-agree {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media screen and (min-width: $desktop) {
+    font-style: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form-request__label-agree {
@@ -131,11 +152,15 @@
     width: 15px;
     height: 15px;
     top: 50%;
-    left: 12px;
+    left: 0;
     border: 2px solid $main-color;
     border-radius: 2px;
     background-color: $main-background-color;
     transform: translateY(-50%);
+
+    @media screen and (min-width: $desktop) {
+      left: 12px;
+    }
   }
 }
 
