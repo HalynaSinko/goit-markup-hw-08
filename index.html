@@ -10,22 +10,30 @@
 
 <body>
   <!-- header site -->
-  <!-- <header class="header">
+  <header class="header">
     <div class="container">
       <nav class="header__nav-site">
         <a class="page-logo header__page-logo" href="./index.html">
           <span class="page-logo">Web</span>Studio</a>
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--active" href="./index.html">Студия</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="">Контакты</a>
-          </li>
-        </ul>
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./images/symbol-defs.svg#cross"></use>
+            <use class="icon-menu" href="./images/symbol-defs.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link nav-list__link--active" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <ul class="header-contacts">
         <li class="header-contacts__item">
@@ -42,7 +50,7 @@
         </li>
       </ul>
     </div>
-  </header> -->
+  </header>
 
   <!-- main info site -->
   <main>
@@ -468,6 +476,7 @@
       </button>
     </div>
   </div>
+  <script src="./js/menu.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 
