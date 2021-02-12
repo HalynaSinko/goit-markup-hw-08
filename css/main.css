@@ -509,18 +509,34 @@ body.modal-open {
 }
 
 .page-logo {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: #2196f3;
+  height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header {
   position: relative;
   border-bottom: 1px solid #ececec;
   background-color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    width: 100%;
+  }
 }
 
 .header__nav-site {
@@ -536,11 +552,26 @@ body.modal-open {
 }
 
 .header__page-logo {
-  padding: 16px 0;
+  margin-right: 93px;
+  padding: 24px 1px 25px 1px;
   color: #000000;
 }
 
+@media screen and (max-width: 767px) {
+  .header__page-logo {
+    padding: 16px 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__page-logo {
+    margin-right: 88px;
+  }
+}
+
 .menu-button {
+  position: relative;
+  z-index: 1;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -548,6 +579,20 @@ body.modal-open {
   margin: 0;
   border: none;
   background-color: transparent;
+}
+
+.menu-button:hover, .menu-button:focus {
+  color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.icon-cross {
+  fill: currentColor;
 }
 
 .menu-button .icon-cross {
@@ -558,23 +603,80 @@ body.modal-open {
   display: block;
 }
 
+.icon-menu {
+  fill: currentColor;
+}
+
 .menu-button.is-open .icon-menu {
   display: none;
 }
 
 .menu-container {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
-  padding: 48px 40px;
   background-color: #ffffff;
-  outline: orangered;
 }
 
-.menu-container.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 48px 40px;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+.header-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .header-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contact-link {
@@ -592,8 +694,35 @@ body.modal-open {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-link:hover, .contact-link:focus {
-  color: #2196f3;
+@media screen and (min-width: 768px) {
+  .contact-link:hover, .contact-link:focus {
+    color: #2196f3;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link {
+    font-size: 12px;
+    line-height: 1.17;
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-link--tel-mobile {
+    font-size: 34px;
+    line-height: 1.8;
+    color: #2196f3;
+    padding: 14px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-link--mail-mobile {
+    font-size: 24px;
+    line-height: 1.17;
+    padding: 14px 0;
+  }
 }
 
 .contact-link__icon {
@@ -604,14 +733,70 @@ body.modal-open {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .contact-link__icon {
+    display: none;
+  }
+}
+
+.header__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .header__social-list {
+    display: none;
+  }
+}
+
+.header__social-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+
+.header__social-item:not(:first-child) {
+  padding-left: 10px;
+}
+
+.header__social-link {
+  display: inline-block;
+  color: currentColor;
+}
+
 .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+@media screen and (max-width: 767px) {
+  .nav-list {
+    display: block;
+    margin-bottom: 286px;
+  }
+}
+
 .nav-list__item {
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-list__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .nav-list__link {
@@ -626,6 +811,14 @@ body.modal-open {
 
 .nav-list__link--active, .nav-list__link:hover, .nav-list__link:focus {
   color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-list__link {
+    font-size: 40px;
+    line-height: 1.17;
+    padding: 0;
+  }
 }
 
 .nav-list__link::after {
@@ -646,6 +839,14 @@ body.modal-open {
 .nav-list__link:hover::after,
 .nav-list__link:focus::after {
   opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-list__link--active::after,
+  .nav-list__link:hover::after,
+  .nav-list__link:focus::after {
+    opacity: 0;
+  }
 }
 
 .hero {
@@ -1330,8 +1531,8 @@ body.modal-open {
 
 .modal__button {
   position: absolute;
-  top: 101px;
-  right: 23px;
+  top: 8px;
+  right: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1357,10 +1558,10 @@ body.modal-open {
   color: #2196f3;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 479px) {
   .modal__button {
-    top: 8px;
-    right: 8px;
+    top: 101px;
+    right: 23px;
   }
 }
 

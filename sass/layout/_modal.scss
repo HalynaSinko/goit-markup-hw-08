@@ -50,9 +50,8 @@
 
 .modal__button {
   position: absolute;
-  top: 101px;
-  right: 23px;
-
+  top: 8px;
+  right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,9 +70,9 @@
     color: $accent-color;
   }
 
-  @media screen and (min-width: $mobile) {
-    top: 8px;
-    right: 8px;
+  @media screen and (max-width: 479px) {
+    top: 101px;
+    right: 23px;
   }
 }
 

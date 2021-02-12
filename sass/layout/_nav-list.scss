@@ -1,13 +1,25 @@
 .nav-list {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-bottom: 286px;
+  }
 }
 
 .nav-list__item {
   position: relative;
-}
 
-.nav-list__item:not(:last-child) {
-  // margin-right: 50px;
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
+  }
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .nav-list__link {
@@ -22,6 +34,12 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.17;
+    padding: 0;
   }
 }
 
@@ -44,4 +62,8 @@
 .nav-list__link:hover::after,
 .nav-list__link:focus::after {
   opacity: 1;
+
+  @media screen and (max-width: 767px) {
+    opacity: 0;
+  }
 }
