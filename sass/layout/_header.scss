@@ -32,12 +32,13 @@
 
 .menu-button {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: inline-flex;
   padding: 0;
   margin: 0;
   border: none;
   background-color: transparent;
+  @include transition(color);
 
   &:hover,
   &:focus {
@@ -66,17 +67,6 @@
     display: none;
   }
 }
-// .menu-button .icon-cross {
-//   display: none;
-// }
-
-// .menu-button.is-open .icon-cross {
-//   display: block;
-// }
-
-// .menu-button.is-open .icon-menu {
-//   display: none;
-// }
 
 .menu-container {
   display: flex;
@@ -92,6 +82,7 @@
     padding: 48px 40px;
     &.is-open {
       display: block;
+      z-index: 1;
     }
   }
 }

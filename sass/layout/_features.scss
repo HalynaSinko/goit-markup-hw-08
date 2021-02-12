@@ -11,23 +11,20 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
+    margin: -15px;
   }
 }
 
 .features__list-item {
   width: 100%;
   &:not(:last-child) {
-    margin-bottom: 30px;
-    @media screen and (min-width: $tablet) {
-      margin-bottom: unset;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
     }
   }
   @media screen and (min-width: $tablet) {
     width: calc((100% - 2 * 30px) / 2);
-    margin-top: 30px;
-    margin-left: 30px;
+    margin: 15px;
   }
   @media screen and (min-width: $desktop) {
     width: calc((100% - 4 * 30px) / 4);

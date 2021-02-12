@@ -10,39 +10,62 @@
 
 <body>
   <!-- header site -->
-  <!-- <header class="header">
-    <div class="container">
+  <header class="header">
+    <div class="container header__container">
       <nav class="header__nav-site">
         <a class="page-logo header__page-logo" href="./index.html">
           <span class="page-logo">Web</span>Studio</a>
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link " href="./index.html">Студия</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--active" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="">Контакты</a>
-          </li>
-        </ul>
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./images/symbol-defs.svg#cross"></use>
+            <use class="icon-menu" href="./images/symbol-defs.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link nav-list__link--active" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="">Контакты</a>
+            </li>
+          </ul>
+          <ul class="header-contacts">
+            <li class="header-contacts__item">
+              <a class="contact-link contact-link--mail-mobile" href="mailto:info@devstudio.com">
+                <svg class="contact-link__icon contact-link__icon--prepend" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                </svg>info@devstudio.com</a>
+            </li>
+            <li class="header-contacts__item">
+              <a class="contact-link contact-link--tel-mobile" href="tel:380961111111">
+                <svg class="contact-link__icon contact-link__icon--prepend" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>+38 096 111 11 11</a>
+            </li>
+          </ul>
+          <ul class="header__social-list">
+            <li class="header__social-item">
+              <a class="header__social-link" href="" lang="en">Instagram</a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link" href="" lang="en">Twitter</a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link" href="" lang="en">Facebook</a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link" href="" lang="en">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <ul class="header-contacts">
-        <li class="header-contacts__item">
-          <a class="contact-link" href="mailto:info@devstudio.com">
-            <svg class="contact-link__icon contact-link__icon--prepend" width="16" height="12">
-              <use href="./images/symbol-defs.svg#icon-envelope"></use>
-            </svg>info@devstudio.com</a>
-        </li>
-        <li class="header-contacts__item">
-          <a class="contact-link" href="tel:380961111111">
-            <svg class="contact-link__icon contact-link__icon--prepend" width="10" height="16">
-              <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-            </svg>+38 096 111 11 11</a>
-        </li>
-      </ul>
     </div>
-  </header> -->
+  </header>
+
   <!-- main portfolio  -->
   <main>
     <section class="portfolio">
@@ -250,28 +273,28 @@
       <div class="footer__join">
         <p class="footer__join-text text">присоединяйтесь</p>
         <ul class="social-networks">
-          <li>
+          <li class="social-networks_item">
             <a class="social-networks__link social-networks__link--dark-theam" href="">
               <svg class="social-networks__icon">
                 <use href="./images/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li>
+          <li class="social-networks_item">
             <a class="social-networks__link social-networks__link--dark-theam" href="">
               <svg class="social-networks__icon">
                 <use href="./images/symbol-defs.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
-          <li>
+          <li class="social-networks_item">
             <a class="social-networks__link social-networks__link--dark-theam" href="">
               <svg class="social-networks__icon">
                 <use href="./images/symbol-defs.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li>
+          <li class="social-networks_item">
             <a class="social-networks__link social-networks__link--dark-theam" href="">
               <svg class="social-networks__icon">
                 <use href="./images/symbol-defs.svg#icon-linkedin"></use>
@@ -296,6 +319,7 @@
       </form>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
