@@ -1,0 +1,138 @@
+.backdrop-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px 15px;
+  overflow-y: scroll;
+  background: rgba(233, 168, 168, 0.2);
+
+  opacity: 1;
+  @include transition(opacity);
+
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.menu-container {
+  padding: 40px 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $main-background-color;
+  transform: translateY(0);
+  @include transition(transform);
+
+  .backdrop-menu--is-hidden & {
+    transform: translateY(-100%);
+  }
+}
+
+.menu__button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.icon-cross {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+.icon-menu {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+.menu__nav-list {
+  margin-bottom: 286px;
+}
+
+.menu__nav-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.menu__nav-link {
+  display: block;
+  font-weight: $average-font-weight;
+  font-size: 40px;
+  line-height: 1.17;
+  padding: 3px 0;
+  letter-spacing: 0.02em;
+  color: $main-color;
+  @include transition(color);
+
+  &--active,
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.menu__header-contacts {
+  margin-left: auto;
+  margin-bottom: 64px;
+}
+
+.menu__contact-link {
+  display: block;
+  font-weight: $average-font-weight;
+  letter-spacing: 0.02em;
+}
+
+.menu__contact-link--blue {
+  font-size: 34px;
+  line-height: 1.8;
+  color: $accent-color;
+  padding: 16px 0;
+}
+
+.menu__contact-link--dark {
+  font-size: 24px;
+  line-height: 1.17;
+  padding: 16px 0;
+  color: $secondary-color;
+}
+
+.menu__social-list {
+  display: flex;
+  font-weight: $average-font-weight;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+
+.menu__social-item {
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+}
+
+.menu__social-link {
+  display: inline-block;
+  color: currentColor;
+}

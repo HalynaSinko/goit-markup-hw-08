@@ -66,6 +66,7 @@
 .portfolio__card-set {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   @media screen and (min-width: $tablet) {
     margin: -15px;
   }
